@@ -361,7 +361,7 @@ app.post('/add_location', (req, res) => {
         (err, results) => {
             if (err) {
                 console.error('Database Error:', err.message);
-                res.status(500).send('Error executing procedure');
+                res.status(500).send(err.message);
                 return;
             }
             res.send('Location added successfully!');
@@ -378,7 +378,7 @@ app.post('/add_worker_role', (req, res) => {
         (err, results) => {
             if (err) {
                 console.error('Database Error:', err.message);
-                res.status(500).send('Error executing procedure');
+                res.status(500).send(err.message);
                 return;
             }
             res.send('Worker added successfully!');
@@ -396,7 +396,7 @@ app.post('/add_van', (req, res) => {
         (err, results) => {
             if (err) {
                 console.error('Database Error:', err.message);
-                res.status(500).send('Error executing procedure');
+                res.status(500).send(err.message);
                 return;
             }
             res.send('Van added successfully!');
@@ -438,7 +438,7 @@ app.post('/takeover_van', (req, res) => {
         (err, results) => {
             if (err) {
                 console.error('Database Error:', err.message);
-                res.status(500).send('Error executing procedure');
+                res.status(500).send(err.message);
                 return;
             }
             res.send('Van successfully taken over!');
@@ -480,7 +480,7 @@ app.post('/load_van', (req, res) => {
         (err, results) => {
             if (err) {
                 console.error('Database Error:', err.message);
-                res.status(500).send('Error executing procedure');
+                res.status(500).send(err.message);
                 return;
             }
             res.send('Van successfully loaded!');
@@ -521,7 +521,7 @@ app.post('/refuel_van', (req, res) => {
     (err, results) => {
       if (err) {
         console.error('Database Error:', err.message);
-        res.status(500).send('Error executing procedure');
+        res.status(500).send(err.message);
         return;
       }
       res.send({ message: 'Van successfully refueled!' });
@@ -550,7 +550,7 @@ app.post('/drive_van', (req, res) => {
     (err, results) => {
       if (err) {
         console.error('Database Error:', err.message);
-        res.status(500).send('Error executing procedure');
+        res.status(500).send(err.message);
         return;
       }
       res.send({ message: 'Van driven successfully!' });
@@ -580,7 +580,7 @@ app.post('/remove_van', (req, res) => {
     (err, results) => {
       if (err) {
         console.error('Database Error:', err.message);
-        res.status(500).send('Error executing procedure');
+        res.status(500).send(err.message);
         return;
       }
       res.send({ message: 'Van removed successfully!' });
