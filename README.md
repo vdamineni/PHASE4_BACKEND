@@ -11,6 +11,7 @@ The application was developed using React, a free and open-source JavaScript lib
 - change directory to PHASE4_FRONTEND
 - run `npm start` to run the app
 
-
-
-
+## Work Distribution
+- Project setup/General Functionality - Vijay
+- Front end design - Miyesha
+- Error Handling - Yasha
